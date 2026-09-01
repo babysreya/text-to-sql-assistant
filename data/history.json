@@ -1,0 +1,8 @@
+[
+  {
+    "timestamp": "2026-08-27 10:50:02",
+    "question": "Plot salary trend by joining date as a line chart",
+    "sql": "SELECT employees.joining_date, employees.salary AS employees_salary\nFROM employees\nORDER BY employees.joining_date ASC",
+    "rows": 8
+  }
+]
