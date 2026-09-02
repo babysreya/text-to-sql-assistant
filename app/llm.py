@@ -24,7 +24,9 @@ Rules:
 - Never use a column name that doesn't exist in the schema above
 - Never add WHERE filters unless the user explicitly asks to filter
 - If user asks for ALL departments or total/summary data, do NOT filter by any department name
-
+- Never use dot notation in aliases (e.g. use AS salary, NOT AS employees.salary)
+- Never add LIMIT unless the user asks for a specific number of results
+- Keep aliases simple single words with no special characters
 Current Question: {question}
 SQL:"""
 )

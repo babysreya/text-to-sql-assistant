@@ -4,5 +4,29 @@
     "question": "Plot salary trend by joining date as a line chart",
     "sql": "SELECT employees.joining_date, employees.salary AS employees_salary\nFROM employees\nORDER BY employees.joining_date ASC",
     "rows": 8
+  },
+  {
+    "timestamp": "2026-09-02 10:11:07",
+    "question": "Show all employees",
+    "sql": "SELECT employees.id AS emp_id, employees.name AS emp_name, employees.department AS emp_department, employees.salary AS emp_salary, employees.joining_date AS emp_joining_date, employees.city AS emp_city, employees.department_id AS emp_department_id FROM employees JOIN departments AS dept ON employees.department_id = dept.id",
+    "rows": 8
+  },
+  {
+    "timestamp": "2026-09-02 10:12:45",
+    "question": "Show salary distribution as a histogram",
+    "sql": "SELECT salary AS employees.salary, COUNT(*) AS count\nFROM employees\nGROUP BY salary\nORDER BY salary ASC\nLIMIT 100000000",
+    "rows": 0
+  },
+  {
+    "timestamp": "2026-09-02 10:14:31",
+    "question": "Show salary distribution as a histogram",
+    "sql": "SELECT salary AS e_salary, COUNT(*) AS count\nFROM employees\nGROUP BY e_salary\nORDER BY e_salary ASC",
+    "rows": 8
+  },
+  {
+    "timestamp": "2026-09-02 10:15:17",
+    "question": "Visualize employees per city as a pie chart",
+    "sql": "SELECT city, SUM(salary) AS total_salary\nFROM employees\nGROUP BY city\nORDER BY total_salary DESC\nLIMIT 0, 1000",
+    "rows": 4
   }
 ]
